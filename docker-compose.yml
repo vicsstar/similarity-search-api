@@ -1,0 +1,11 @@
+services:
+  similarity-search-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: similarity-search-api
+    ports:
+      - "8080:8080" # Adjust the port as needed
+    environment:
+      - JAVA_OPTS=-Xmx512m
+    restart: always
